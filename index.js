@@ -15,7 +15,7 @@ const mailgun = require("mailgun-js")({ apiKey: api_key, domain: domain });
 
 //Route en get
 app.get(
-  "https://git.heroku.com/tripadvisor-server-mailgun.git/",
+  "https://tripadvisor-with-mailgun-amande.netlify.app/#",
   async (req, res) => {
     try {
       res.status("route get");
