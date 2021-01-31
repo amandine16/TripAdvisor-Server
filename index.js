@@ -23,7 +23,7 @@ app.get("/", async (req, res) => {
 });
 
 //Route en post
-app.post("/form", async (req, res) => {
+app.post("/", async (req, res) => {
   //Destructuring
   const { firstname, lastname, email, subject, message } = req.fields;
 
