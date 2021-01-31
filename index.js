@@ -35,12 +35,13 @@ app.post("/", async (req, res) => {
     subject: subject,
     text: message,
   };
-  //Envoie de l'objet DATA via MailGun
+  // Envoie de l'objet DATA via MailGun
   mailgun.messages().send(data, (error, body) => {
     if (!error) {
       console.log(data);
       return res.json(body);
     } else {
+      console.log(error);
       res.status(401).json(error);
     }
     // res.status(200).json({ firstname, lastname, email, subject, message });
