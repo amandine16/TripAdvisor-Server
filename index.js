@@ -14,16 +14,13 @@ const domain = process.env.MAILGUN_DOMAIN;
 const mailgun = require("mailgun-js")({ apiKey: api_key, domain: domain });
 
 //Route en get
-app.get(
-  "https://tripadvisor-with-mailgun-amande.netlify.app/#",
-  async (req, res) => {
-    try {
-      res.status("route get");
-    } catch (error) {
-      res.status(400).json({ error: error.message });
-    }
+app.get("/", async (req, res) => {
+  try {
+    res.status("route get");
+  } catch (error) {
+    res.status(400).json({ error: error.message });
   }
-);
+});
 
 //Route en post
 app.post("/form", async (req, res) => {
