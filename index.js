@@ -25,6 +25,7 @@ app.get("/", async (req, res) => {
 //Route en post
 app.post("/", async (req, res) => {
   //Destructuring
+  console.log(req.fields);
   const { firstname, lastname, email, subject, message } = req.fields;
 
   //   Création de l'objet DATA
